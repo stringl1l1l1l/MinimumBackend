@@ -22,7 +22,7 @@ spring:
       maximum-pool-size: 10 # 最大连接池数
       max-lifetime: 1770000
   redis:
-    password: 123456
+#    password: 123456
 
 mybatis-plus:
   configuration:
@@ -30,14 +30,10 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: # mapper映射文件位置
     - classpath:mapper/*.xml
-  type-aliases-package: com.example.parkingSystem.entity
+  type-aliases-package: com.example.entity
   global-config:
     db-config:
       logic-delete-field: delFlag
       logic-delete-value: 1
       logic-not-delete-value: 0
 #分页pageHelper
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
